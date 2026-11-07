@@ -5,6 +5,7 @@ pipeline {
         AWS_REGION = 'us-west-1'
         ECR_REGISTRY = '640440227805.dkr.ecr.us-west-1.amazonaws.com'
         ECR_REPOSITORY = 'devsecops-ecommerce'
+        SONAR_SCANNER_HOME = tool 'sonar-scanner'
     }
 
     stages {
