@@ -3,13 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/cskreddyk/devsecops-ecommerce.git'
-            }
-        }
-
         stage('Docker Build') {
             steps {
                 sh 'docker build -t devsecops-ecommerce:latest .'
