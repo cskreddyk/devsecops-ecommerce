@@ -11,18 +11,18 @@ pipeline {
     stages {
 
         stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('sonarqube') {
-                    sh '''
-                        sonar-scanner \
-                        -Dsonar.projectKey=devsecops-ecommerce \
-                        -Dsonar.projectName=devsecops-ecommerce \
-                        -Dsonar.sources=. \
-                        -Dsonar.exclusions='**/__pycache__/**,**/.venv/**,**/venv/**'
-                    '''
-                }
-            }
+    steps {
+        withSonarQubeEnv('sonarqube') {
+            sh '''
+                ${SONAR_SCANNER_HOME}/bin/sonar-scanner \
+                -Dsonar.projectKey=devsecops-ecommerce \
+                -Dsonar.projectName=devsecops-ecommerce \
+                -Dsonar.sources=. \
+                -Dsonar.exclusions='**/__pycache__/**,**/.venv/**,**/venv/**'
+            '''
         }
+    }
+}
 
         stage('Docker Build') {
             steps {
