@@ -1,21 +1,68 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Products</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - DevSecOps Store</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-    <h1>Products</h1>
+<nav class="navbar">
+    <div class="logo">DevSecOps Store</div>
 
-    <ul>
-        <li>Laptop</li>
-        <li>Mobile Phone</li>
-        <li>Headphones</li>
-        <li>Keyboard</li>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/health">Health</a></li>
     </ul>
+</nav>
 
-    <a href="/">Back to Home</a>
+<section class="container">
+
+    <div class="page-title">
+        <h1>Our Products</h1>
+        <p>Explore our latest technology products.</p>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <div class="product-icon">💻</div>
+            <h3>Laptop</h3>
+            <p>Powerful laptop for work and development.</p>
+            <a href="#" class="btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">📱</div>
+            <h3>Mobile Phone</h3>
+            <p>Latest smartphone with modern features.</p>
+            <a href="#" class="btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">🎧</div>
+            <h3>Headphones</h3>
+            <p>High-quality audio experience.</p>
+            <a href="#" class="btn">View Product</a>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">⌨️</div>
+            <h3>Keyboard</h3>
+            <p>Professional keyboard for productivity.</p>
+            <a href="#" class="btn">View Product</a>
+        </div>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+    <p>© 2026 DevSecOps Store | Secure. Scalable. Automated.</p>
+</footer>
 
 </body>
 </html>

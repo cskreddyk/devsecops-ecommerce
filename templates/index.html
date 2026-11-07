@@ -1,16 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DevSecOps E-Commerce</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 
 <body>
 
-    <h1>Welcome to DevSecOps E-Commerce</h1>
+<nav class="navbar">
+    <div class="logo">DevSecOps Store</div>
 
-    <p>Enterprise DevOps Project</p>
+    <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Products</a></li>
+        <li><a href="/health">Health</a></li>
+    </ul>
+</nav>
 
-    <a href="/products">View Products</a>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Welcome to DevSecOps Store</h1>
+
+        <p>
+            A secure, scalable e-commerce application
+            powered by AWS, Docker, Kubernetes and Jenkins.
+        </p>
+
+        <a href="/products" class="btn">Explore Products</a>
+    </div>
+</section>
+
+<section class="container">
+    <div class="page-title">
+        <h1>Built with DevSecOps</h1>
+        <p>Modern application delivery with security and automation.</p>
+    </div>
+
+    <div class="products-grid">
+
+        <div class="product-card">
+            <div class="product-icon">☁️</div>
+            <h3>AWS Cloud</h3>
+            <p>Hosted on scalable AWS infrastructure.</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">🐳</div>
+            <h3>Docker</h3>
+            <p>Containerized application deployment.</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">☸️</div>
+            <h3>Kubernetes</h3>
+            <p>Highly available application orchestration.</p>
+        </div>
+
+        <div class="product-card">
+            <div class="product-icon">🔐</div>
+            <h3>DevSecOps</h3>
+            <p>Security integrated into the delivery pipeline.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 DevSecOps Store | AWS + Kubernetes + Jenkins</p>
+</footer>
 
 </body>
 </html>
